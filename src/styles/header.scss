@@ -2,7 +2,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 42px;
+  padding: 32px 0px 22px;
 
   .cm {
     display: flex;
@@ -31,7 +31,7 @@
   justify-content: center;
   align-items: center;
   font-size: 32px;
-  padding: 52px 0 96px;
+  padding: 52px 0 35px;
   .calling {
     color: #666666;
     font-size: 20px;
@@ -50,8 +50,9 @@
   display: flex;
   margin: 0; // Bỏ khoảng cách
   justify-content: center;
-  padding: 6px 16px; // Khoảng đệm cho phần tử
+  // padding: 6px 16px; // Khoảng đệm cho phần tử
   height: 264px;
+  padding-bottom: 35px;
 
   .icon {
     flex: 0 1 calc(33.33% - 20px); // Chiều rộng 1/3 trừ đi khoảng cách bên ngoài
@@ -76,10 +77,19 @@
     .con {
       position: absolute;
     }
+
     .mn {
       opacity: 0.5;
     }
   }
+  .speaker:active {
+    // &:active {
+    //   background-color: #fff;
+    // }
+    background-color: #fff;
+    transition: background-color 0.1s;
+  }
+
   .ttt {
     margin-top: 112px;
     text-align: center;

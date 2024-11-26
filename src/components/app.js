@@ -9,12 +9,14 @@ import {
   faUser,
   faListDots,
   faVoicemail,
+  faDeleteLeft,
 } from "@fortawesome/free-solid-svg-icons";
 
 function App() {
   const [isCalling, setIsCalling] = useState(false);
   const [inputValue, setInputValue] = useState("");
   const [selectedIndex, setSelectedIndex] = useState(null); // State để lưu chỉ số đã chọn
+  const [selectedNumber, setSelectedNumber] = useState(null);
 
   const numbers = [
     { number: 1 },
@@ -34,6 +36,7 @@ function App() {
   const handleButtonClick = (number) => {
     setInputValue(inputValue + number);
     // setSelectedIndex(null); // Reset selected index khi nhấn
+    setSelectedNumber(number);
   };
 
   const handleEndCall = () => {
@@ -66,25 +69,7 @@ function App() {
           <div className="numbers">
             <ul>
               {numbers.map((item, i) => (
-                <li
-                  key={i}
-                  onClick={() => handleButtonClick(item.number)}
-                  // style={{
-                  //   backgroundColor:
-                  //     selectedIndex === i ? "lightgray" : "transparent", // Đổi màu khi được nhấn
-                  //   cursor: "pointer", // Thay đổi con trỏ chuột
-                  //   display: "flex",
-                  //   flexDirection: "column",
-                  //   justifyContent: "center",
-                  //   alignItems: "center",
-                  //   border: "1px solid #d1d1d130",
-                  //   borderRadius: "50%",
-                  //   width: "80px",
-                  //   height: "80px",
-                  //   margin: "6px 12px",
-                  //   transition: "background-color 0.3s",
-                  // }}
-                >
+                <li key={i} onClick={() => handleButtonClick(item.number)}>
                   <div className="number">{item.number}</div>
                   <div className="text">{item.text}</div>
                 </li>
@@ -97,6 +82,11 @@ function App() {
                 <FontAwesomeIcon icon={faPhone} />
               </div>
             </div>
+            {selectedNumber !== null && (
+              <div className="delete">
+                <FontAwesomeIcon icon={faDeleteLeft} />
+              </div>
+            )}
           </div>
         </div>
         <div className="footer">

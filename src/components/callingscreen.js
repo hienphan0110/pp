@@ -83,8 +83,8 @@ function CallingScreen({ phoneNumber, onEndCall }) {
           <FontAwesomeIcon className="con" icon={faListDots} />
           <h3 className="ttt">keypath</h3>
         </div>
-        <div className="icon">
-          <FontAwesomeIcon className="con" icon={faVolumeHigh} />
+        <div className="icon speaker">
+          <FontAwesomeIcon className="con " icon={faVolumeHigh} />
           <h3 className="ttt">speaker</h3>
         </div>
         <div className="icon">
