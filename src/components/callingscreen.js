@@ -37,6 +37,11 @@ function CallingScreen({ phoneNumber, onEndCall }) {
   const [showCalling, setShowCalling] = useState(true);
   const [countdownVisible, setCountdownVisible] = useState(false);
   const [countdown, setCountdown] = useState(0);
+  const [isActive, setIsActive] = useState(false); // Trạng thái để theo dõi nhấn
+
+  const toggleSpeaker = () => {
+    setIsActive(!isActive); // Đảo ngược trạng thái khi nhấn
+  };
 
   useEffect(() => {
     const timer = setTimeout(() => {
@@ -83,8 +88,22 @@ function CallingScreen({ phoneNumber, onEndCall }) {
           <FontAwesomeIcon className="con" icon={faListDots} />
           <h3 className="ttt">keypath</h3>
         </div>
-        <div className="icon speaker">
-          <FontAwesomeIcon className="con " icon={faVolumeHigh} />
+        <div
+          className="icon speaker"
+          onClick={toggleSpeaker}
+          style={{
+            backgroundColor: isActive ? "rgb(232 232 232)" : "#95959766", //
+            transition: "background-color 0.2s", // Hiệu ứng chuyển màu nền
+          }}
+        >
+          {/* <FontAwesomeIcon className="con " icon={faVolumeHigh} /> */}
+          <FontAwesomeIcon
+            className="con"
+            icon={faVolumeHigh}
+            style={{
+              color: isActive ? "black" : "inherit",
+            }} // Thay đổi màu sắc
+          />
           <h3 className="ttt">speaker</h3>
         </div>
         <div className="icon">

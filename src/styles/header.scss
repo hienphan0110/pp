@@ -39,7 +39,7 @@
   }
   .countdown {
     color: #666666;
-    font-size: 20px;
+    font-size: 18px;
     font-weight: 500;
   }
 }
@@ -82,12 +82,17 @@
       opacity: 0.5;
     }
   }
-  .speaker:active {
-    // &:active {
-    //   background-color: #fff;
-    // }
-    background-color: #fff;
-    transition: background-color 0.1s;
+  // .speaker {
+  //   // &:active {
+  //   //   background-color: #fff;
+  //   // }
+  //   &:active {
+  //     background-color: #fff;
+  //   }
+  //   // transition: background-color 0.1s;
+  // }
+  .icon.active .con {
+    color: black; /* Đổi màu biểu tượng thành đen khi nhấn */
   }
 
   .ttt {
