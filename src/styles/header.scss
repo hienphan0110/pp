@@ -6,7 +6,6 @@
 
   .cm {
     display: flex;
-    // margin: 0 auto;
     align-items: center;
     flex-direction: column;
 
@@ -50,7 +49,6 @@
   display: flex;
   margin: 0; // Bỏ khoảng cách
   justify-content: center;
-  // padding: 6px 16px; // Khoảng đệm cho phần tử
   height: 264px;
   padding-bottom: 35px;
 
@@ -82,7 +80,6 @@
   .ttt {
     margin-top: 112px;
     text-align: center;
-    // width: 100%;
     color: #e1dfdf;
     font-weight: 300;
   }
@@ -92,15 +89,12 @@
   display: flex; // Sử dụng flexbox để bố trí
   justify-content: center; // Căn giữa nội dung
   align-items: center; // Căn giữa theo chiều dọc
-  // border: 1px solid #ff3b30; // Đường viền cho mỗi phần tử
   border-radius: 50%; // Bo tròn 100% để tạo hình tròn
   height: 80px; // Đặt chiều cao cố định
   margin: 10px; // Khoảng cách giữa các phần tử danh sách
   transition: background-color 0.2s; // Hiệu ứng chuyển màu nền
   font-size: 18px;
   background-color: #ff3b30;
-
-  // Đảm bảo rằng các biểu tượng có thể thay đổi màu sắc khi hover
   &:checked {
     background-color: #8e8e93; // Màu nền khi hover
   }
