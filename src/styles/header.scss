@@ -69,29 +69,16 @@
     font-size: 18px;
     background-color: #95959766;
     position: relative;
-
-    // Đảm bảo rằng các biểu tượng có thể thay đổi màu sắc khi hover
-    // &:hover {
-    //   background-color: #34c759; // Màu nền khi hover
-    // }
     .con {
       position: absolute;
     }
-
     .mn {
       opacity: 0.5;
     }
   }
-  .speaker {
-    // &:active {
-    //   background-color: #fff;
-    // }
-    &:active {
-      background-color: #fff !important;
-    }
-    // transition: background-color 0.1s;
+  .speaker.active {
+    background-color: #fff;
   }
-
   .ttt {
     margin-top: 112px;
     text-align: center;
