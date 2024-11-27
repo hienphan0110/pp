@@ -82,17 +82,14 @@
       opacity: 0.5;
     }
   }
-  // .speaker {
-  //   // &:active {
-  //   //   background-color: #fff;
-  //   // }
-  //   &:active {
-  //     background-color: #fff;
-  //   }
-  //   // transition: background-color 0.1s;
-  // }
-  .icon.active .con {
-    color: black; /* Đổi màu biểu tượng thành đen khi nhấn */
+  .speaker {
+    // &:active {
+    //   background-color: #fff;
+    // }
+    &:active {
+      background-color: #fff !important;
+    }
+    // transition: background-color 0.1s;
   }
 
   .ttt {

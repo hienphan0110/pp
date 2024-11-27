@@ -39,8 +39,15 @@ function CallingScreen({ phoneNumber, onEndCall }) {
   const [countdown, setCountdown] = useState(0);
   const [isActive, setIsActive] = useState(false); // Trạng thái để theo dõi nhấn
 
+  // const toggleSpeaker = () => {
+  //   setIsActive(!isActive); // Đảo ngược trạng thái khi nhấn
+  // };
+  // const toggleSpeaker = (e) => {
+  //   const iconElement = e.currentTarget; // Lấy phần tử cha
+  //   iconElement.classList.toggle("active"); // Thêm hoặc xóa lớp active
+  // };
   const toggleSpeaker = () => {
-    setIsActive(!isActive); // Đảo ngược trạng thái khi nhấn
+    setIsActive((prevActive) => !prevActive); // Đảo ngược trạng thái khi nhấn
   };
 
   useEffect(() => {
@@ -89,20 +96,20 @@ function CallingScreen({ phoneNumber, onEndCall }) {
           <h3 className="ttt">keypath</h3>
         </div>
         <div
-          className="icon speaker"
+          className={`icon speaker ${isActive ? "active" : ""}`}
           onClick={toggleSpeaker}
-          style={{
-            backgroundColor: isActive ? "rgb(232 232 232)" : "#95959766", //
-            transition: "background-color 0.2s", // Hiệu ứng chuyển màu nền
-          }}
+          // style={{
+          //   backgroundColor: isActive ? "rgb(232 232 232)" : "#95959766", //
+          //   transition: "background-color 0.2s", // Hiệu ứng chuyển màu nền
+          // }}
         >
           {/* <FontAwesomeIcon className="con " icon={faVolumeHigh} /> */}
           <FontAwesomeIcon
             className="con"
             icon={faVolumeHigh}
-            style={{
-              color: isActive ? "black" : "inherit",
-            }} // Thay đổi màu sắc
+            // style={{
+            //   color: isActive ? "black" : "inherit",
+            // }} // Thay đổi màu sắc
           />
           <h3 className="ttt">speaker</h3>
         </div>
