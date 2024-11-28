@@ -37,14 +37,14 @@
     transition: background-color 0.2s; // Hiệu ứng chuyển màu nền
     font-size: 18px;
     background-color: #d1d1d130;
-    &:active {
-      background-color: #d3d3d3d1; /* Màu nền khi nhấn */
-      border-color: darkgray;
-      transition: background-color 0.1s;
-    }
-    &:focus-visible {
-      background-color: #d1d1d130;
-    }
+    // &:active {
+    //   background-color: #d3d3d3d1; /* Màu nền khi nhấn */
+    //   border-color: darkgray;
+    //   transition: background-color 0.1s;
+    // }
+    // &:focus-visible {
+    //   background-color: #d1d1d130;
+    // }
     .number {
       font-size: 26px;
       color: #ffffff;
@@ -74,9 +74,9 @@
       transition: background-color 0.2s; // Hiệu ứng chuyển màu nền
       background: #20c741;
 
-      &:checked {
-        background-color: #e0e0e0; // Đổi màu nền khi di chuột qua
-      }
+      // &:checked {
+      //   background-color: #e0e0e0; // Đổi màu nền khi di chuột qua
+      // }
       .call {
         display: flex;
         justify-content: center;

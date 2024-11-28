@@ -87,7 +87,6 @@ function CallingScreen({ phoneNumber, onEndCall }) {
           <h3 className="ttt">keypath</h3>
         </div>
         <div
-          // className={`icon speaker ${isActive ? "active" : ""}`}
           className={"icon speaker " + (isActive ? "active" : "")}
           onClick={toggleSpeaker}
         >
