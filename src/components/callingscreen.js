@@ -37,15 +37,7 @@ function CallingScreen({ phoneNumber, onEndCall }) {
   const [showCalling, setShowCalling] = useState(true);
   const [countdownVisible, setCountdownVisible] = useState(false);
   const [countdown, setCountdown] = useState(0);
-  const [isActive, setIsActive] = useState(false); // Trạng thái để theo dõi nhấn
-
-  // const toggleSpeaker = () => {
-  //   setIsActive(!isActive); // Đảo ngược trạng thái khi nhấn
-  // };
-  // const toggleSpeaker = (e) => {
-  //   const iconElement = e.currentTarget; // Lấy phần tử cha
-  //   iconElement.classList.toggle("active"); // Thêm hoặc xóa lớp active
-  // };
+  const [isActive, setIsActive] = useState(false);
   const toggleSpeaker = () => {
     setIsActive((prevActive) => !prevActive); // Đảo ngược trạng thái khi nhấn
   };
@@ -73,13 +65,12 @@ function CallingScreen({ phoneNumber, onEndCall }) {
   const formatCountdown = (count) => {
     const minutes = String(Math.floor(count / 60)).padStart(2, "0"); // Tính phút
     const seconds = String(count % 60).padStart(2, "0"); // Tính giây
-    return `${minutes}:${seconds}`; // Trả về định dạng 00:00
+    return minutes + ":" + seconds; // Trả về định dạng 00:00
   };
   return (
     <div className="container">
       <div className="header2">
         <h1>{phoneNumber}</h1>
-        {/* <h1 className="calling">calling...</h1> */}
         {showCalling ? (
           <h1 className="calling">Calling...</h1>
         ) : (
@@ -96,7 +87,8 @@ function CallingScreen({ phoneNumber, onEndCall }) {
           <h3 className="ttt">keypath</h3>
         </div>
         <div
-          className={`icon speaker ${isActive ? "active" : ""}`}
+          // className={`icon speaker ${isActive ? "active" : ""}`}
+          className={"icon speaker " + (isActive ? "active" : "")}
           onClick={toggleSpeaker}
         >
           <FontAwesomeIcon className="con " icon={faVolumeHigh} />
@@ -105,7 +97,7 @@ function CallingScreen({ phoneNumber, onEndCall }) {
             icon={faVolumeHigh}
             style={{
               color: isActive ? "black" : "inherit",
-            }} // Thay đổi màu sắc
+            }}
           />
           <h3 className="ttt">speaker</h3>
         </div>
