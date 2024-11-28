@@ -15,7 +15,7 @@ import {
 function App() {
   const [isCalling, setIsCalling] = useState(false);
   const [inputValue, setInputValue] = useState("");
-  const [selectedIndex, setSelectedIndex] = useState(null); // State để lưu chỉ số đã chọn
+  // const [selectedIndex, setSelectedIndex] = useState(null); // State để lưu chỉ số đã chọn
   const [selectedNumber, setSelectedNumber] = useState(null);
 
   const numbers = [
