@@ -2,7 +2,7 @@
   "name": "pp",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://github.com/hienphan0110/pp",
+  "homepage": "/https://github.com/hienphan0110/pp",
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^6.6.0",
     "@fortawesome/free-solid-svg-icons": "^6.6.0",
