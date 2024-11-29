@@ -11,6 +11,7 @@ import {
   faVoicemail,
   faDeleteLeft,
 } from "@fortawesome/free-solid-svg-icons";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 
 function App() {
   const [isCalling, setIsCalling] = useState(false);
